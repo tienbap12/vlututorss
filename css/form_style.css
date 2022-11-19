@@ -1,4 +1,41 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Roboto:300,400,500,700');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+body {
+  line-height: 1.5;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  outline: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
 
 * {
   margin: 0;
@@ -8,7 +45,7 @@
 
 body,
 input {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .container {
@@ -71,6 +108,7 @@ form.sign-in-form {
   font-size: 2.2rem;
   color: #444;
   margin-bottom: 10px;
+  font-weight: 700;
 }
 
 .input-field {
@@ -139,7 +177,7 @@ form.sign-in-form {
 }
 
 .container:before {
-  content: "";
+  content: '';
   position: absolute;
   height: 2000px;
   width: 2000px;
@@ -190,7 +228,7 @@ form.sign-in-form {
 }
 
 .panel .content {
-  color: #e06425;
+  color: #fff;
   transition: transform 0.9s ease-in-out;
   transition-delay: 0.6s;
 }
@@ -368,6 +406,25 @@ form.sign-in-form {
   }
 }
 
+.press-btn {
+  width: 125px;
+  background-color: #07294d;
+  border: none;
+  outline: none;
+  height: 35px;
+  border-radius: 3px;
+  color: #fff;
+  font-weight: 600;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.press-btn a {
+  text-decoration: none;
+  color: #fff;
+}
+
 @media (max-width: 570px) {
   form {
     padding: 0 1.5rem;
@@ -396,33 +453,33 @@ form.sign-in-form {
 
 /* Become a Tutors */
 
-.container-bct {
-  height: 100vh;
+.container-bat {
+  height: 100%;
   display: flex;
   justify-content: space-between;
-  /* padding: 30px 20px; */
-  font-family: "Poppins", sans-serif;
-  font-size: 1rem;
-  color: white;
-  background-color: var(--Red);
+  color: #fff;
 }
 
 .hero {
-  width: 511px;
-  height: 100%;
+  width: 300px;
+
   background-color: #07294d;
 }
 
 .hero .hero-logo {
-  padding: 30px;
   width: 70%;
-  margin-left: 60px;
+  position: sticky;
+  left: 2%;
+  cursor: pointer;
+  top: 10px;
 }
 
 .hero .hero-content {
-  width: 300px;
-  margin: 60px 85px;
   font-size: 16px;
+  padding: 20px;
+  position: sticky;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .hero__title {
@@ -430,12 +487,14 @@ form.sign-in-form {
   font-size: 1.75rem;
 }
 
-.container-bct .sign-up .back-btn {
+.container-bat .sign-up .back-btn {
   text-decoration: none;
   color: white;
+  width: 40px;
+  display: block;
 }
 
-.container-bct .sign-up .back-btn i {
+.container-bat .sign-up .back-btn i {
   background: #07294d;
   width: 40px;
   height: 40px;
@@ -449,25 +508,24 @@ form.sign-in-form {
   font-size: 20px;
 }
 
-.container-bct .sign-up .back-btn:hover i {
+.container-bat .sign-up .back-btn:hover i {
   background-color: #e06425;
   color: #07294d;
   transition: 0.5s ease-in-out;
 }
 
 .sign-up {
-  /* width: 100%; */
-  width: 1024px;
+  width: 100%;
   position: relative;
   background: #e1e1e1;
 }
 
 .container-sign-up {
-  width: 565px;
-  position: absolute;
-  top: 50%;
-  left: 25%;
-  transform: translateY(-50%);
+  width: 600px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 20px;
 }
 
 .form__input .form__select {
@@ -480,7 +538,6 @@ form.sign-in-form {
   cursor: pointer;
   display: block;
   float: left;
-  font-family: inherit;
   font-size: 14px;
   font-weight: normal;
   height: 42px;
@@ -505,7 +562,6 @@ form.sign-in-form {
   border: none;
   cursor: pointer;
   height: 100%;
-  font-family: "Poppins", sans-serif;
   font-weight: 600;
   color: #07294d;
 }
@@ -552,13 +608,14 @@ form.sign-in-form {
   display: none;
 }
 
-.form__input .form__label {
+.form__label {
   position: absolute;
   top: -13px;
   left: 14px;
   display: block;
   background: #fff;
   margin: 3px 3px;
+  font-weight: 600;
 }
 
 .form__input.warning span {
@@ -605,6 +662,23 @@ form.sign-in-form {
   color: #07294d;
   height: 150px;
   font-size: 16px;
+}
+
+.form-radio {
+  width: 100%;
+  border: 2px solid hsla(246, 25%, 77%, 0.25);
+  margin-bottom: 15px;
+  border-radius: 4px;
+  position: relative;
+  padding: 1.3rem;
+}
+
+.form-radio > li {
+  list-style-type: none;
+}
+
+.form-radio .lb-radio {
+  font-weight: 600;
 }
 
 .form__input textarea:focus {
